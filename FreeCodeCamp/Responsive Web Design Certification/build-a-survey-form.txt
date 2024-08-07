@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insurance Protection Survey</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1 id="title">Insurance Protection Survey</h1>
+  <p id="description">Please fill out this form to help us understand your insurance need</p>
+  <form id="survey-form" method="post" action="https://your-survey-endpoint.com">
+    <fieldset>
+      <label id="name-label">Full Name: 
+        <input id="name" name="name" type="text" placeholder="Your First Name" required>
+      </label>
+      <label id="email-label">Email: 
+        <input id="email" name="email" type="email" placeholder="Your Email" required>
+      </label>
+      <label id="age-label">Age: 
+        <input id="age" name="age" type="age" placeholder="Your Age" required>
+      </label>
+      <label id="number-label">Phone Number: 
+        <input id="number" name="number" type="number" min="10" max="11" placeholder="Phone Number" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What is your status:</legend>
+      <select id="dropdown" name="status">
+        <option value="">(select one)</option>
+        <option value="1">Single</option>
+        <option value="2">Married</option>
+        <option value="3">Widowed</option>
+        <option value="4">Divorced</option>
+        <option value="5">Others</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Insurance type</legend>
+      <label> 
+        <input id="health-insurance" type="radio" name="insurance-type" value="health-insurance">Health Insurance 
+      </label>
+      <label> 
+        <input id="life-insurance" type="radio" name="insurance-type" value="life-insurance">Life Insurance 
+      </label>
+      <label> 
+        <input id="company-insurance" type="radio" name="insurance-type" value="company-insurance">Company Insurance 
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Additional Coverage options</legend>
+      <label> 
+        <input id="dental-insurance" type="checkbox" name="additional-coverage" value="dental">Dental Insurance
+      </label>
+      <label> 
+        <input id="critical-insurance" type="checkbox" name="additional-coverage" value="critical">Critical illness Insurance
+      </label>
+      <label> 
+        <input id="dissability-insurance" type="checkbox" name="additional-coverage" value="dissability">Permanent Dissability Insurance
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="annual-income">Annual Income:
+        <select id="annual-income" name="annual-income" required>
+          <option value="">(select one)</option>
+          <option value="under-25000">Under $25,000</option>
+          <option value="25000-50000">$25,000 - $50,000</option>
+          <option value="50000-75000">$50,000 - $75,000</option>
+          <option value="75000-100000">$75,000 - $100,000</option>
+          <option value="over-100000">Over $100,000</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label for="thoughts">Provide your thoughts:
+        <textarea id="thoughts" name="thoughts" rows="5" cols="50" placeholder="My current protection is..."></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label>
+        <input id="submit" class="submit" value="Submit" type="submit"/>
+      </label>
+    </fieldset>
+  </form>
+</body>
+</html>
